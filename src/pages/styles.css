@@ -1,0 +1,225 @@
+html,
+body {
+  margin: 0;
+}
+
+.page-wrap {
+  text-align: center;
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  font-size: 26px;
+  padding: 15px;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: #000000;
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #fff;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #000000;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #c4d432;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #c4d432;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #fff;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  overflow: hidden;
+  background-color: #000000;
+  box-shadow: 0px 4px 4px #c4d432;
+}
+
+.header__button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  margin-left: 35px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.header__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+  padding: 15px;
+  color: #fff;
+  float: right;
+  list-style-type: none;
+}
+
+.hero img {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  padding-top: 5px;
+  box-shadow: 0px 4px 4px #c4d432;
+}
+
+.hero__break {
+  width: 100vw;
+  height: 55px;
+  background-color: #000000;
+  margin-top: 5px;
+}
+
+.coach__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.coach {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  border: 3px solid rgb(0, 0, 0);
+  text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 20px;
+  margin: 5px;
+
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+
+  cursor: pointer;
+}
+
+.coaches h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+  width: auto;
+  margin-top: 55px;
+}
+
+.coaches hr {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  width: 100%;
+  height: 2px;
+}
+
+.active {
+  flex: 5;
+  transition: 0.5s;
+  background-color: #c4d432;
+}
+
+.coach__image {
+  display: flex;
+  
+  width: 100%;
+  height: auto;
+}
+
+.coach__name {
+  padding-left: 15px;
+  font-size: 30px;
+}
+
+.coach__description {
+  padding-left: 15px;
+  font-size: 30px;
+}
+
+.push {
+  margin-bottom: 50px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}
