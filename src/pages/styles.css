@@ -80,12 +80,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   border: none;
+  overflow: none;
 }
 
 header {
   display: flex;
+  width: 100vw;
   height: 100px;
-  overflow: hidden;
+  overflow: auto;
   background-color: #000000;
   box-shadow: 0px 4px 4px #c4d432;
 }
@@ -103,6 +105,7 @@ header {
   justify-content: center;
   align-items: center;
   margin: auto;
+  width: 100vw;
 }
 
 .header__socials {
@@ -138,28 +141,33 @@ header {
   margin-top: 5px;
 }
 
-.coach__list {
+.coaches {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-top: 15px;
 }
 
-.coach {
-  flex: 1;
+.coaches ul {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  padding: 150px;
+}
+
+.coach {
+  display: flex;
+  flex-direction: row;
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
-  border: 3px solid rgb(0, 0, 0);
   text-align: center;
   align-items: center;
+  width: auto;
+  height: auto;
   /* Safari transitionend event.propertyName === flex */
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
   font-size: 20px;
   margin: 5px;
-
   justify-content: center;
   align-items: center;
   list-style-type: none;
@@ -185,27 +193,21 @@ header {
   height: 2px;
 }
 
-.active {
-  flex: 5;
-  transition: 0.5s;
-  background-color: #c4d432;
-}
-
 .coach__image {
-  display: flex;
-  
-  width: 100%;
-  height: auto;
+  margin: auto;
 }
 
 .coach__name {
-  padding-left: 15px;
-  font-size: 30px;
+  margin: auto;
 }
 
 .coach__description {
-  padding-left: 15px;
-  font-size: 30px;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
 }
 
 .push {

@@ -7,7 +7,7 @@ import "./styles.css"
 import { Hero } from "../components/hero"
 
 const IndexPage = props => {
-  console.log(props)
+  // console.log(props)
   return (
     <Layout>
       <SEO title="Home" />

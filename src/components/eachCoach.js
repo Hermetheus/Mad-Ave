@@ -2,9 +2,9 @@ import React from "react"
 import { useSpring, animated } from "react-spring"
 import Img from "gatsby-image"
 
-export const EachCoach = content => {
-  console.log(content)
-
+export const EachCoach = coach => {
+  console.log(coach)
+  const { name, description, image } = coach.coach
   const [isExpanded, setExpanded] = React.useState(false)
 
   const ref = React.useRef(null)
@@ -19,7 +19,7 @@ export const EachCoach = content => {
     borderRadius: isExpanded ? "0px" : "10px",
     onRest: () => {
       if (isExpanded && ref.current) {
-        ref.current.style.height = "auto"
+        ref.current.style.height = "500px"
         ref.current.style.width = "500px"
       }
     },
@@ -27,35 +27,23 @@ export const EachCoach = content => {
 
   return (
     <>
-      {content.content.content.data.allContentfulMadAveCoaches.edges.map(
-        edge => {
-          const { id, image, name, description } = edge.node
-
-          return (
-            <div className="">
-              <ul className="coach" key={id} id={id}>
-                <div>
-                  <animated.div
-                    key={id}
-                    id={id}
-                    ref={ref}
-                    style={style}
-                    onClick={e => setExpanded(!isExpanded)}
-                  >
-                    <Img className="coach__image" fluid={image.fluid} />
-
-                    <p className="coach__name">{name}</p>
-                    <hr />
-                    <p className="coach__description">
-                      {description.description}
-                    </p>
-                  </animated.div>
-                </div>
-              </ul>
-            </div>
-          )
-        }
-      )}
+      <div className="coach">
+        <animated.div
+          ref={ref}
+          style={style}
+          onClick={e => setExpanded(!isExpanded)}
+        >
+          <Img className="coach__image" fluid={image.fluid} />
+          <p className="coach__name">{name}</p>
+          <hr />
+          <p className="coach__description">{description.description}</p>
+        </animated.div>
+      </div>
+      {/* {isExpanded === true ? (
+        <div className="menu">Hello</div>
+      ) : (
+        <div className="menu">Please select your coach above</div>
+      )} */}
     </>
   )
 }
