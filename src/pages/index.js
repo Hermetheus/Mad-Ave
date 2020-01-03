@@ -39,5 +39,13 @@ export const query = graphql`
         }
       }
     }
+    allContentfulMadAveMenu {
+      edges {
+        node {
+          item
+          category
+        }
+      }
+    }
   }
 `
