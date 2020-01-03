@@ -1,18 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Coach from "../components/coach"
+import Coach from "../components/Coach"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import "./styles.css"
-import { Hero } from "../components/hero"
+import { Hero } from "../components/Hero"
+import Footer from "../components/Footer"
 
-const IndexPage = props => {
-  // console.log(props)
+const IndexPage = (props, index) => {
+  console.log(props)
   return (
     <Layout>
       <SEO title="Home" />
       <Hero />
-      <Coach content={props} />
+      <Coach content={props} key={index} />
+      <Footer />
     </Layout>
   )
 }

@@ -1,8 +1,10 @@
 import React from "react"
-import { EachCoach } from "./eachCoach"
+import { EachCoach } from "./EachCoach"
 
 const Coach = content => {
-  // console.log(content)
+  console.log(content)
+  const edges = content.content.data.allContentfulMadAveCoaches
+  console.log(edges)
 
   return (
     <>
@@ -12,7 +14,7 @@ const Coach = content => {
           <hr />
         </h1>
 
-        <ul>
+        <div className="alignCoach">
           {content.content.data.allContentfulMadAveCoaches.edges.map(
             (edge, index) => {
               // console.log(edge)
@@ -23,13 +25,7 @@ const Coach = content => {
               )
             }
           )}
-        </ul>
-        <div>ello</div>
-        {/* {isExpanded === true ? (
-          <div>Hello</div>
-        ) : (
-          <div>Please select your coach above</div>
-        )} */}
+        </div>
       </div>
     </>
   )
